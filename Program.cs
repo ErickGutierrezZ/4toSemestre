@@ -1,85 +1,77 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Hacer un programa que lea 3 números, si los números son iguales se calculará el promedio, de lo contrario
-//se sumarán los números que son pares o impares entre ellos, mostrará el mayor y menor de ellos 
-using System;
-using System.Runtime.InteropServices;
+//for 
+/*for (int x = 0; x < 10; x++)
+{
+    Console.WriteLine(x);
+}
+for (int x = 10; x > 0; x--) 
+{
+    Console.WriteLine(x);
+}*/
+/*int x = 0;
 
-int a, b, c, s, d, f;
-Console.Write("Escribe tres numeros ");
-a = Convert.ToInt32(Console.ReadLine());
-b = Convert.ToInt32(Console.ReadLine());
-c = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(x++);
+Console.WriteLine(++x);
+String[] a = {"Hola", "Adiós"};
+foreach (String s in a)
+    Console.WriteLine(s);*/
 
-//promedio
-if ((a == b) && (b == c))
-{
-    Console.WriteLine("El promedio es de " + a);
-}
-s = a % 2;
-d = b % 2;
-f = c % 2;
-//par o impar
-if (s == 0 && d == 0 && f == 0)//todos son pares
-{
-    Console.WriteLine("Los tres son pares y su suma es {0}", a + b + c);
-}
-else if (s == 0 && d == 0)//a y b son pares
-{
-    Console.Write("dos numeros son pares y sumados es {0}", a + b);
-    Console.WriteLine(" y solo uno es impares {0}", c);
-}
-else if (f == 0 && d == 0)//b y c son pares
-{
-    Console.Write("dos numeros son pares y sumados es {0}", c + b);
-    Console.WriteLine(" y solo uno es impares {0}", a);
-}
-else if (s == 0 && f == 0)//a y c son pares
-{
-    Console.Write("dos numeros son pares y sumados es {0}", a + c);
-    Console.WriteLine(" y solo uno es impares {0}", b);
-}
-else if (s == 0)//a es par
-{
-    Console.WriteLine("solo uno es par y es  {0} y la suma de dos impares {1}", a, b + c);
-}
-else if (d == 0)//b es par
-{
-    Console.WriteLine("solo uno es par y es  {0} y la suma de dos impares {1}", b, a + c);
-}
-else if (f == 0)//c es par
-{
-    Console.WriteLine("solo uno es par y es  {0} y la suma de dos impares {1}", c, a + b);
-}
-else//todos son impares
 
-{
-    Console.WriteLine("todos los numeros son impares y su suma es {0}", a + b + c);
-}
 
-//mayor
-if ((a > b) && (a > c))
+//while
+/*int w = 0;
+bool ban = true;
+while (ban)
 {
-    Console.WriteLine("El mayor es " + a);
+    w++;
+    if (w > 10){
+        //break;
+        ban= false;
+    }else
+    {
+        Console.WriteLine(w);
+    }
 }
-else if ((b > a) && (b > c))
+w = 0;
+while (w < 10)
 {
-    Console.WriteLine("El mayor es " + b);
-}
-else
+    w++;
+    Console.WriteLine(w);
+}*/
+using System.ComponentModel.Design;
+using System.Diagnostics.SymbolStore;
+
+int a;
+bool r = true;
+
+while (true)
 {
-    Console.WriteLine("El mayor es " + c);
+    Console.Write("Coloca un número ");
+    a = Convert.ToInt32(Console.ReadLine());
+    if ((a % 2 == 0)&& (a>0))
+    {
+        Console.WriteLine("Los elementos entre 0 y el número son: ");
+        for (int i = 0; i < a; i++)
+        {
+            Console.WriteLine(i);
+        }
+        
+        r = true;
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Coloca un número par y positivo");
+        r = false;
+    }
 }
 
-//menor
-if ((a < b) && (a < c))
-{
-    Console.WriteLine("El menor es " + a);
-}
-else if ((b < a) && (b < c))
-{
-    Console.WriteLine("El menor es " + b);
-}
-else
-{
-    Console.WriteLine("El menor es " + c);
-}
+
+//Hacer un programa que lea nombre, cantidad y precio de 5 productos, el programa mostrará al finalizar el porcentaje de iva
+//y el total a pagar
+
+
+//Hcaer un programa que lea un número, si el número no es par se volverá a pedir de lo contrario
+//Mostrará todos los elementos que está entre 0 y el (El número no debe de ser negativo)
+
+//do while
